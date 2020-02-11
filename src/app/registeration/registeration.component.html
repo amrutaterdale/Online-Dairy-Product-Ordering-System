@@ -1,0 +1,31 @@
+ 
+
+ 
+<body id="b">
+  <form [formGroup]="userform" (ngSubmit)="save()"><br>
+    <h2 id="h1">Registeration Form</h2>
+    &nbsp;<h5 id="t">Name:</h5>
+    &nbsp; <input type="text" formControlName="fname"><br>
+    <small *ngIf="userform.get('fname').touched && userform.get('fname').hasError('required')">
+      first name required</small>
+      &nbsp; <h5 id="t">Password:</h5> 
+      &nbsp; <input type="password" formControlName="password" ><br>
+     <small *ngIf="userform.get('password').touched && userform.get('password').hasError('required')">
+      password required</small>
+     
+     &nbsp; <h5 id="t">Email:</h5>
+  
+     &nbsp; <input type="email" formControlName="email"><br>
+     <small *ngIf="userform.get('email').touched && userform.get('email').hasError('required')">Email required</small>
+     &nbsp;  <h5 id="t">Gender:</h5>
+     &nbsp; male<input type="radio" name="gender" value="male" formControlName="gender">
+      female<input type="radio" name="gender" value="female" formControlName="gender"><br><br>
+      &nbsp;<input type="submit" id="s" class="btn btn-success" value="submit" [disabled]="userform.invalid">
+  </form>
+
+  </body>
+  
+  
+  
+  
+  

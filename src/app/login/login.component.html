@@ -1,0 +1,17 @@
+
+
+<div class="wrapper">
+	<div class="container">
+		<h1 style="font-style: italic">Welcome</h1><br>
+		
+		<form class="form">
+			<b style="text-decoration: underline">Username:</b><input type="text" id="i1" name="Username" [(ngModel)]="uname"><br><br>
+			<b style="text-decoration: underline">Password:</b><input type="password" name="Password" [(ngModel)]="pass"><br><br>
+            <button title="login to view site" class="btn btn-primary" type="submit" id="login-button" (click)="login()">Login</button> &nbsp;
+            <button title="register if not registerd" class="btn btn-primary" mat-button (click)="register()">New User</button>
+		</form>
+    </div>
+</div>
+
+
+

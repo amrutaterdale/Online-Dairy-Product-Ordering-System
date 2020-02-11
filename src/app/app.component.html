@@ -1,0 +1,41 @@
+
+
+<!-- <a [routerLink]="['/home']">Home</a> &nbsp;
+<a [routerLink]="['/product']">Our products</a> &nbsp;
+<a [routerLink]="['/order']">Order now</a> &nbsp;
+<a [routerLink]="['/login']">Admin login</a> &nbsp;
+<a [routerLink]="['/register']">Registeration</a> &nbsp;
+<a [routerLink]="['/sign']">sign in</a>
+<br><br><br> -->
+
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link"  [routerLink]="['/home']" routerLinkActive="active">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/product']" routerLinkActive="active">Our products</a>
+  </li>
+  <li class="nav-item">
+    <a title="first login to buy product" class="nav-link" [routerLink]="['/order']" routerLinkActive="active">Order now</a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active" title="sign to purchase order">Login</a>
+    </li>
+    <!-- <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/register']" routerLinkActive="active">Registeration</a>
+    </li> -->
+    <!-- <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/orlist']" routerLinkActive="active">OrderList</a>
+    </li> -->
+
+   
+    
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/logout']" routerLinkActive="active">Logout</a>
+    </li>
+    </ul>
+  
+
+
+<router-outlet></router-outlet>
+

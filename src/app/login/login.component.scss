@@ -1,0 +1,30 @@
+
+h1{
+    color:black;
+    text-shadow:3px 2px yellow;
+    font-size: 55px;
+}
+
+.wrapper
+{
+    /* border:3px dashed black; */
+    margin-right: 18cm;
+    margin-left: 9cm;
+    background: url(D:\fullproject\src\assets\red.jpeg);
+    //background-image:(D:\AnguarFinalProject\src\assets\pinkjuice.jpeg); 
+    text-align:center;
+    margin-top:100px;
+    border-radius: 5px;
+    padding-top: 0.8cm;
+    //padding:1cm;
+    
+   
+    height:8cm;
+     /* width: 7cm;  */
+}
+
+input[type]:focus
+{
+background: skyblue;
+}
+

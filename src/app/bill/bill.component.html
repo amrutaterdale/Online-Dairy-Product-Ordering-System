@@ -1,0 +1,38 @@
+
+
+<table id="t" border="2" style="font-weight:500">
+  <tr>
+    <th>Product Name</th>
+    <th>Company</th>
+    <th> pur_Quantity</th>
+    <th>Rate</th>
+    
+    
+  </tr>
+  <tr *ngFor="let p of pur_data">
+    <td>{{p.prod_name}}</td>
+    <td>{{p.company}}</td>
+    
+    <td>{{p.pur_qty}}</td>
+    
+    <td>{{p.rate}}</td>
+    
+  </tr>
+  <tr *ngIf="pur_data.length==0 ||!pur_data">
+    <td colspan="4" style="text-align: center;color:purple;">No bill to show</td>
+  </tr>
+  
+    
+</table><br>
+<table style="border:solid #8a2be2;margin-left: 2cm">
+<tr>
+
+  <td style="font-weight:bold;color:orangered;background:yellow">Payable Amount={{total}} Rs.</td>
+</tr>
+</table><br><br>
+
+
+
+
+
+

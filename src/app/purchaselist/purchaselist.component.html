@@ -1,0 +1,30 @@
+
+
+
+<table id="t1" border=3>
+  <tr>
+    <th>Product name</th>
+    <th>Company</th>
+    <th>Purchase Quantity</th>
+    <th>Rate</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let t of purchaselist;let i=index">
+    <td>{{t.prod_name}}</td>
+    <td>{{t.company}}</td>
+    <td>{{t.pur_qty}}</td>
+    <td>{{t.rate}}</td>
+    
+    <td><button mat-button class="btn btn-danger" (click)="cancel(i)">remove from cart</button></td>
+
+  </tr>
+  <tr *ngIf="!purchaselist||purchaselist.length==0">
+    <td colspan="5" style="color:purple">No products to display</td>
+  </tr>
+  
+</table><br>
+<div>
+<button class="btn btn-primary" mat-button (click)="back()">back to order</button>
+<button mat-button class="btn btn-success" (click)="total()">TotalBill</button>
+</div>
+ 

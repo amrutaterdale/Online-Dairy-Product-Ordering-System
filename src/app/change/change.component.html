@@ -1,0 +1,72 @@
+<body><br>
+
+  <!-- <table>
+  Product Name:<input type="text"name="prodname" value="prod_name" [(ngModel)]="data.prod_name"><br><br>
+  Company:<input type="text" name="company" value="company" [(ngModel)]="data.company"><br><br>
+  Quantity:<input type="text" name="qty" value="quantity" [(ngModel)]="data.quantity"><br><br>
+  Rate:<input type="text" name="rate" value="rate" [(ngModel)]="data.rate"><br><br>
+  
+  <button (click)="save()">Add product</button>
+  </table> -->
+  
+  
+  
+  <table id="t" border=3 align="center">
+    <tr>
+      <th>Product Name</th>
+      <th>Company</th>
+      <th>Quantity</th>
+      <th>Rate</th>
+      <th>Action</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let p of allprod;let i=index;">
+      <td>{{p.prod_name}}</td>
+      <td>{{p.company}}</td>
+      <td>{{p.quantity}}</td>
+      <td>{{p.rate}}</td>
+     <td> <button class="btn btn-primary" mat-button (click)="update(i)">Edit</button></td>
+     <td><button class="btn btn-danger" mat-button (click)="delete(i)">Delete</button></td>
+  </tr>
+  </table>
+  
+  <br><br>
+  
+  
+  <!-- <div class="wrapper"> -->
+    
+    <div class="container">
+    <div class="row">
+  
+    <div id="c1" class="col-lg-4">
+      <br>
+      <form class="form">
+          Product Name:
+          <input type="text"name="prodname" value="prod_name" [(ngModel)]="data.prod_name"><br><br>
+          &nbsp; Company:<input type="text" name="company" value="company" [(ngModel)]="data.company"><br><br>
+          &nbsp; Quantity:<input type="text" name="qty" value="quantity" [(ngModel)]="data.quantity"><br><br>
+          &nbsp; Rate:
+          <input type="text" name="rate" value="rate" [(ngModel)]="data.rate"><br><br>
+          <button class="btn btn-success" (click)="save()">Add product</button><br>
+        
+      </form>
+      </div>
+      <div class="col-lg-1">
+  
+      </div>
+  
+  
+      <div id="c1" class="col-lg-4">
+  <h3>Update Product</h3>
+  Product Name:<input type="text" name="product"  [(ngModel)]="data1.prod_name"><br><br>
+  Company:<input type="text" name="company"  [(ngModel)]="data1.company"><br><br>
+  Quantity:<input type="text" name="quantity" [(ngModel)]="data1.quantity"><br><br>
+  Rate:<input type="text" name="rate"  [(ngModel)]="data1.rate"><br><br>
+  <button class="btn btn-success" (click)="modify()">Update</button>
+  </div>
+  </div>
+  </div>
+  </body>
+  
+  
+  

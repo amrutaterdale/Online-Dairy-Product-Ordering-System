@@ -1,0 +1,49 @@
+
+<body>&nbsp;
+    <app-child [All]="getAllCount()"
+               [Amul]="getAmulCount()"
+               [Chitale]="getChitaleCount()"
+               [Gokul]="getGokulCount()"
+               (childevent)="selectradio=$event"></app-child>
+    
+              
+               
+     <table id="t1" border="3" >
+        <tr>
+            <th>Product name</th>
+            <th>Company</th>
+            <th>Quantity</th>
+            <th>Rate</th>
+            <th>purchase quantity</th>
+            <th>Action</th>
+          </tr>
+       <ng-container *ngFor="let d of data;let i =index">
+         <tr *ngIf="d.company===selectradio || selectradio==='All'">
+           
+           <td>{{d.prod_name}}</td>
+           <td>{{d.company}}</td>
+           <td>{{d.quantity}}</td> 
+           <td>{{d.rate}}</td>
+           <td><input type="text" name="qty" title="insert number" [(ngModel)]="d.pur_qty" number required></td>
+           <td><button mat-button class="btn btn-primary" (click)="buy(i)">Add to Cart</button></td>
+           
+           
+         </tr>
+         
+       </ng-container>
+     </table>   
+    
+     <!-- <input type="button" value="Total Bill" (click)="calculate()"> -->
+     
+     
+     <button style="margin-left: 1.5cm" mat-button class="btn btn-primary" (click)="view()">View cart</button><br>
+     
+     
+    </body>
+
+    {{obj|json}}
+     
+     
+     
+     
+    
